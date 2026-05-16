@@ -1,0 +1,194 @@
+.weather-card {
+  min-height: 80px;
+  border-radius: 12px;
+  padding: 20px 24px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  background-color: #00a3ff;
+}
+
+.weather-card_time_night {
+  background-color: #286897;
+}
+
+.weather-card_condition_rain,
+.weather-card_condition_storm,
+.weather-card_condition_snow,
+.weather-card_condition_fog {
+  background-color: #6caed0;
+}
+
+.weather-card_time_night.weather-card_condition_rain,
+.weather-card_time_night.weather-card_condition_storm,
+.weather-card_time_night.weather-card_condition_snow,
+.weather-card_time_night.weather-card_condition_fog,
+.weather-card_time_night.weather-card_condition_cloudy {
+  background-color: #286897;
+}
+
+.weather-card__temp {
+  margin: 0;
+  position: relative;
+  z-index: 1;
+  font-family: "Cabinet Grotesk Bold", Arial, sans-serif;
+  font-size: 36px;
+  line-height: 40px;
+}
+
+.weather-card__scene {
+  position: absolute;
+  inset: 0;
+}
+
+.weather-card__sun-moon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #fff200;
+}
+
+.weather-card_time_night .weather-card__sun-moon {
+  background-color: #fffcb0;
+}
+
+.weather-card__cloud {
+  position: absolute;
+  width: 74px;
+  height: 28px;
+  border-radius: 40px;
+  background-color: #d9d9d9;
+}
+
+.weather-card__cloud::before,
+.weather-card__cloud::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background-color: inherit;
+}
+
+.weather-card__cloud::before {
+  width: 34px;
+  height: 34px;
+  left: 12px;
+  bottom: 10px;
+}
+
+.weather-card__cloud::after {
+  width: 44px;
+  height: 44px;
+  right: 8px;
+  bottom: 7px;
+}
+
+.weather-card__cloud_front {
+  right: 0;
+  bottom: 0;
+}
+
+.weather-card__cloud_back {
+  right: 28px;
+  bottom: 2px;
+  opacity: 0.9;
+}
+
+.weather-card_condition_sunny .weather-card__cloud,
+.weather-card_condition_sunny .weather-card__rain,
+.weather-card_condition_sunny .weather-card__snow,
+.weather-card_condition_sunny .weather-card__fog,
+.weather-card_condition_sunny .weather-card__lightning {
+  display: none;
+}
+
+.weather-card_condition_cloudy .weather-card__rain,
+.weather-card_condition_cloudy .weather-card__snow,
+.weather-card_condition_cloudy .weather-card__fog,
+.weather-card_condition_cloudy .weather-card__lightning {
+  display: none;
+}
+
+.weather-card_condition_rain .weather-card__sun-moon,
+.weather-card_condition_rain .weather-card__snow,
+.weather-card_condition_rain .weather-card__fog,
+.weather-card_condition_rain .weather-card__lightning,
+.weather-card_condition_storm .weather-card__sun-moon,
+.weather-card_condition_storm .weather-card__snow,
+.weather-card_condition_storm .weather-card__fog,
+.weather-card_condition_snow .weather-card__sun-moon,
+.weather-card_condition_snow .weather-card__rain,
+.weather-card_condition_snow .weather-card__fog,
+.weather-card_condition_snow .weather-card__lightning,
+.weather-card_condition_fog .weather-card__sun-moon,
+.weather-card_condition_fog .weather-card__rain,
+.weather-card_condition_fog .weather-card__snow,
+.weather-card_condition_fog .weather-card__lightning {
+  display: none;
+}
+
+.weather-card__rain {
+  position: absolute;
+  right: 12px;
+  bottom: 0;
+  width: 64px;
+  height: 34px;
+  background-image: repeating-linear-gradient(
+    115deg,
+    rgba(255, 255, 255, 0.35) 0 2px,
+    transparent 2px 12px
+  );
+}
+
+.weather-card__snow {
+  position: absolute;
+  right: 4px;
+  bottom: 2px;
+  width: 76px;
+  height: 28px;
+  background-image: radial-gradient(#fff 2px, transparent 3px);
+  background-size: 14px 14px;
+}
+
+.weather-card__fog {
+  position: absolute;
+  right: 0;
+  bottom: 4px;
+  width: 84px;
+  height: 42px;
+  border-radius: 42px;
+  background: rgba(217, 217, 217, 0.58);
+}
+
+.weather-card__lightning {
+  position: absolute;
+  right: 48px;
+  bottom: 2px;
+  width: 16px;
+  height: 28px;
+  background-color: #fff200;
+  clip-path: polygon(
+    48% 0,
+    100% 0,
+    62% 42%,
+    100% 42%,
+    28% 100%,
+    44% 54%,
+    12% 54%
+  );
+}
+
+@media screen and (max-width: 640px) {
+  .weather-card {
+    padding: 18px;
+  }
+
+  .weather-card__temp {
+    font-size: 32px;
+    line-height: 36px;
+  }
+}

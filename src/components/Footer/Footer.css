@@ -1,0 +1,20 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  margin-top: 80px;
+  color: #000;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.footer__author,
+.footer__year {
+  margin: 0;
+}
+
+@media screen and (max-width: 480px) {
+  .footer {
+    margin-top: 48px;
+  }
+}

@@ -1,0 +1,36 @@
+.main__items {
+  margin-top: 40px;
+}
+
+.main__text {
+  margin: 0 0 34px;
+  font-family: "Cabinet Grotesk Bold", Arial, sans-serif;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.main__cards {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+@media screen and (max-width: 640px) {
+  .main__items {
+    margin-top: 28px;
+  }
+
+  .main__text {
+    margin-bottom: 18px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .main__cards {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 14px;
+  }
+}

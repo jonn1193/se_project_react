@@ -1,0 +1,16 @@
+.page {
+  background-color: #f3f3f3;
+  min-height: 100vh;
+}
+
+.page__content {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 40px 24px;
+}
+
+@media screen and (max-width: 640px) {
+  .page__content {
+    padding: 0 16px 20px;
+  }
+}
