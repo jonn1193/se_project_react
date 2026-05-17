@@ -1,4 +1,4 @@
-import { APIkey, coordinates } from "./constants";
+import { apiKey, coordinates } from "./constants";
 
 export function getWeatherCondition(temperature) {
   if (temperature >= 86) {
@@ -54,14 +54,14 @@ function parseWeatherData(data) {
 }
 
 export function getWeather() {
-  if (!APIkey) {
+  if (!apiKey) {
     return Promise.reject(
       new Error("Add an OpenWeather API key in src/utils/constants.js"),
     );
   }
 
   const { latitude, longitude } = coordinates;
-  const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=imperial&appid=${APIkey}`;
+  const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=imperial&appid=${apiKey}`;
 
   return fetch(url).then((res) => {
     if (!res.ok) {
