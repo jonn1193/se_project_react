@@ -14,6 +14,11 @@ WTWR is a React app that uses weather data to recommend clothing items for the c
 
 [View the live project on GitHub Pages](https://jonn1193.github.io/se_project_react/)
 
+## Project Pitch Video
+
+Check out [this video](https://www.loom.com/share/148adc8ac3354e01a5f4a379b9a5b095), where I describe my
+project and some challenges I faced while building it.
+
 ## Technologies
 
 - React
