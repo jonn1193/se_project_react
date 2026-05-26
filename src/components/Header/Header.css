@@ -8,6 +8,11 @@
 .header__logo {
   width: 89px;
   height: 40px;
+  display: block;
+}
+
+.header__logo-link {
+  flex: 0 0 auto;
 }
 
 .header__meta {
@@ -38,6 +43,8 @@
   display: flex;
   align-items: center;
   gap: 12px;
+  color: #000;
+  text-decoration: none;
 }
 
 .header__username {

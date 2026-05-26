@@ -8,6 +8,7 @@ export const apiKey = "fcb52387ac7a7ec16772321ce0e36726";
 export const defaultWeather = {
   temperature: {
     F: 72,
+    C: 22,
   },
   city: "Las Vegas",
   type: "warm",

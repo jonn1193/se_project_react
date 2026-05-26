@@ -45,6 +45,7 @@ function parseWeatherData(data) {
   return {
     temperature: {
       F: temperature,
+      C: Math.round((temperature - 32) * (5 / 9)),
     },
     city: data.name,
     type: getWeatherCondition(temperature),

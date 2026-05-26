@@ -47,6 +47,9 @@
 }
 
 .item-modal__footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
   padding: 20px 32px 32px;
 }
 
@@ -62,8 +65,27 @@
   margin-bottom: 12px;
 }
 
+.item-modal__delete {
+  align-self: flex-start;
+  border: 0;
+  padding: 0;
+  color: #ff4d00;
+  background-color: transparent;
+  font-family: "Cabinet Grotesk Bold", Arial, sans-serif;
+  font-size: 20px;
+  line-height: 24px;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.item-modal__delete:hover {
+  opacity: 0.6;
+}
+
 @media screen and (max-width: 480px) {
   .item-modal__footer {
+    flex-direction: column;
+    gap: 16px;
     padding: 18px 20px 24px;
   }
 }

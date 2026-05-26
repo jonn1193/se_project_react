@@ -1,6 +1,8 @@
 import "./ItemCard.css";
 
 function ItemCard({ item, onCardClick }) {
+  const imageSrc = item.link || item.imageUrl;
+
   const handleCardClick = () => {
     onCardClick(item);
   };
@@ -12,7 +14,7 @@ function ItemCard({ item, onCardClick }) {
           <h2 className="card__name">{item.name}</h2>
           <span className="card__like" aria-label="Like" />
         </div>
-        <img className="card__image" src={item.link} alt={item.name} />
+        <img className="card__image" src={imageSrc} alt={item.name} />
       </button>
     </li>
   );
