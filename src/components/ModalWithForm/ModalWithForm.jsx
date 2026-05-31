@@ -9,8 +9,8 @@ function ModalWithForm({
   onClose,
   onSubmit,
 }) {
-  const handleOverlayClick = (evt) => {
-    if (evt.target === evt.currentTarget) {
+  const handleOverlayClick = (event) => {
+    if (event.target === event.currentTarget) {
       onClose();
     }
   };

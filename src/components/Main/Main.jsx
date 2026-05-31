@@ -20,7 +20,11 @@ function Main({ weatherData, clothingItems, onCardClick }) {
         </p>
         <ul className="main__cards">
           {filteredItems.map((item) => (
-            <ItemCard key={item._id} item={item} onCardClick={onCardClick} />
+            <ItemCard
+              key={item._id ?? item.id}
+              item={item}
+              onCardClick={onCardClick}
+            />
           ))}
         </ul>
       </section>

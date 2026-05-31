@@ -12,7 +12,13 @@ WTWR is a React app that uses weather data to recommend clothing items for the c
 
 ## Deployment
 
-[View the live project on GitHub Pages](https://jonn1193.github.io/se_project_react/)
+This project uses a local json-server API for clothing items. To view the current version, run the app locally:
+
+[Open the local app](http://localhost:5173/)
+
+You can also view the earlier GitHub Pages deployment here:
+
+[View the project on GitHub Pages](https://jonn1193.github.io/se_project_react/)
 
 ## Project Pitch Video
 

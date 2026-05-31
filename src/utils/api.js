@@ -1,5 +1,9 @@
 const baseUrl = "http://localhost:3001";
 
+function normalizeItem(item) {
+  return { ...item, _id: item._id ?? item.id };
+}
+
 function checkResponse(res) {
   if (res.ok) {
     return res.json();
@@ -9,7 +13,9 @@ function checkResponse(res) {
 }
 
 export function getItems() {
-  return fetch(`${baseUrl}/items`).then(checkResponse);
+  return fetch(`${baseUrl}/items`)
+    .then(checkResponse)
+    .then((items) => items.map(normalizeItem));
 }
 
 export function addItem({ name, imageUrl, weather }) {
@@ -19,7 +25,9 @@ export function addItem({ name, imageUrl, weather }) {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({ name, imageUrl, weather }),
-  }).then(checkResponse);
+  })
+    .then(checkResponse)
+    .then(normalizeItem);
 }
 
 export function deleteItem(itemId) {
