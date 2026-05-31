@@ -12,7 +12,6 @@ function ItemCard({ item, onCardClick }) {
       <button className="card__button" type="button" onClick={handleCardClick}>
         <div className="card__header">
           <h2 className="card__name">{item.name}</h2>
-          <span className="card__like" aria-label="Like" />
         </div>
         <img className="card__image" src={imageSrc} alt={item.name} />
       </button>

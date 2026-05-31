@@ -4,7 +4,7 @@ function normalizeItem(item) {
   return { ...item, _id: item._id ?? item.id };
 }
 
-function checkResponse(res) {
+export function checkResponse(res) {
   if (res.ok) {
     return res.json();
   }
