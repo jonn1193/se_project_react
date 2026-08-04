@@ -1,5 +1,6 @@
 .card {
   min-width: 0;
+  position: relative;
 }
 
 .card__button {
@@ -8,7 +9,6 @@
   border: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: 8px;
   padding: 0;
-  position: relative;
   overflow: hidden;
   background-color: #fff;
 }
@@ -47,7 +47,11 @@
   width: 18px;
   height: 16px;
   flex: 0 0 auto;
+  border: 0;
+  padding: 0;
   position: relative;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 .card__like::before,
@@ -73,6 +77,12 @@
   left: 0;
   transform: rotate(-45deg);
   transform-origin: 100% 100%;
+}
+
+.card__like_active::before,
+.card__like_active::after {
+  border-color: #000;
+  background-color: #000;
 }
 
 .card__image {
