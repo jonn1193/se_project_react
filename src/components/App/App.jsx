@@ -76,6 +76,7 @@ function App() {
         setIsLoggedIn(true);
         resetForm();
         handleCloseModal();
+        navigate("/");
       })
       .catch((err) => {
         console.error(err);
@@ -94,6 +95,7 @@ function App() {
         setIsLoggedIn(true);
         resetForm();
         handleCloseModal();
+        navigate("/");
       })
       .catch((err) => {
         console.error(err);
@@ -267,6 +269,7 @@ function App() {
                   <ProtectedRoute isLoggedIn={isLoggedIn}>
                     <Profile
                       clothingItems={clothingItems}
+                      isLoggedIn={isLoggedIn}
                       onAddClick={handleAddClick}
                       onCardClick={handleCardClick}
                       onCardLike={handleCardLike}

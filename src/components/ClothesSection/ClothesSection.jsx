@@ -3,6 +3,7 @@ import "./ClothesSection.css";
 
 function ClothesSection({
   clothingItems,
+  isLoggedIn,
   onAddClick,
   onCardClick,
   onCardLike,
@@ -24,7 +25,7 @@ function ClothesSection({
           <ItemCard
             key={item._id}
             item={item}
-            isLoggedIn
+            isLoggedIn={isLoggedIn}
             onCardClick={onCardClick}
             onCardLike={onCardLike}
           />

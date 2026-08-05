@@ -6,6 +6,7 @@ import "./Profile.css";
 
 function Profile({
   clothingItems,
+  isLoggedIn,
   onAddClick,
   onCardClick,
   onCardLike,
@@ -22,6 +23,7 @@ function Profile({
       <SideBar onEditProfileClick={onEditProfileClick} onSignOut={onSignOut} />
       <ClothesSection
         clothingItems={currentUserItems}
+        isLoggedIn={isLoggedIn}
         onAddClick={onAddClick}
         onCardClick={onCardClick}
         onCardLike={onCardLike}
