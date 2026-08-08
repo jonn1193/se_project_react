@@ -45,44 +45,20 @@
 
 .card__like {
   width: 18px;
-  height: 16px;
+  height: 15px;
   flex: 0 0 auto;
   border: 0;
   padding: 0;
-  position: relative;
   background-color: transparent;
+  background-image: url("../../images/default-like.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
   cursor: pointer;
 }
 
-.card__like::before,
-.card__like::after {
-  content: "";
-  position: absolute;
-  top: 2px;
-  width: 10px;
-  height: 14px;
-  border: 1.5px solid rgba(0, 0, 0, 0.35);
-  border-bottom: 0;
-  border-radius: 10px 10px 0 0;
-  background-color: transparent;
-}
-
-.card__like::before {
-  left: 8px;
-  transform: rotate(45deg);
-  transform-origin: 0 100%;
-}
-
-.card__like::after {
-  left: 0;
-  transform: rotate(-45deg);
-  transform-origin: 100% 100%;
-}
-
-.card__like_active::before,
-.card__like_active::after {
-  border-color: #000;
-  background-color: #000;
+.card__like_active {
+  background-image: url("../../images/liked.svg");
 }
 
 .card__image {

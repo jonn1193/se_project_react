@@ -6,7 +6,7 @@ const initialValues = {
   password: "",
 };
 
-function LoginModal({ isOpen, onCloseModal, onLogin }) {
+function LoginModal({ isOpen, onCloseModal, onLogin, onRegisterClick }) {
   const { values, handleChange, resetForm } = useForm(initialValues);
 
   const handleSubmit = (evt) => {
@@ -19,9 +19,11 @@ function LoginModal({ isOpen, onCloseModal, onLogin }) {
       title="Log in"
       name="login"
       buttonText="Log in"
+      secondaryButtonText="or Sign Up"
       isOpen={isOpen}
       onClose={onCloseModal}
       onSubmit={handleSubmit}
+      onSecondaryButtonClick={onRegisterClick}
     >
       <label className="modal__label">
         Email

@@ -157,3 +157,25 @@
     border-radius: 16px;
   }
 }
+
+.modal__actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.modal__secondary-button {
+  border: 0;
+  padding: 0;
+  color: rgba(0, 0, 0, 0.5);
+  background-color: transparent;
+  font-family: "Cabinet Grotesk Bold", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.modal__secondary-button:hover {
+  color: #000;
+}

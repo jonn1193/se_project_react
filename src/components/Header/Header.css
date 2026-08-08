@@ -16,6 +16,7 @@
 }
 
 .header__meta {
+  flex-grow: 1;
   margin: 0;
   font-family: "Cabinet Grotesk Bold", Arial, sans-serif;
   font-size: 20px;
@@ -23,7 +24,7 @@
 }
 
 .header__add-clothes-btn {
-  margin: 0 0 0 auto;
+  margin: 0;
   padding: 0;
   border: none;
   color: #000;
@@ -83,7 +84,7 @@
 }
 
 .header__auth-buttons {
-  margin-left: auto;
+  margin-left: 0;
   display: flex;
   align-items: center;
   gap: 20px;
@@ -129,3 +130,4 @@
     line-height: 20px;
   }
 }
+

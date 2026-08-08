@@ -66,7 +66,7 @@ function App() {
   };
 
   const handleLogin = ({ email, password }, resetForm) => {
-    authorize({ email, password })
+    return authorize({ email, password })
       .then((res) => {
         localStorage.setItem("jwt", res.token);
         return checkToken(res.token);
@@ -85,18 +85,7 @@ function App() {
 
   const handleRegister = ({ name, avatar, email, password }, resetForm) => {
     register({ name, avatar, email, password })
-      .then(() => authorize({ email, password }))
-      .then((res) => {
-        localStorage.setItem("jwt", res.token);
-        return checkToken(res.token);
-      })
-      .then((user) => {
-        setCurrentUser(user);
-        setIsLoggedIn(true);
-        resetForm();
-        handleCloseModal();
-        navigate("/");
-      })
+      .then(() => handleLogin({ email, password }, resetForm))
       .catch((err) => {
         console.error(err);
       });
@@ -303,11 +292,13 @@ function App() {
             isOpen={activeModal === "login"}
             onCloseModal={handleCloseModal}
             onLogin={handleLogin}
+            onRegisterClick={handleRegisterClick}
           />
           <RegisterModal
             isOpen={activeModal === "register"}
             onCloseModal={handleCloseModal}
             onRegister={handleRegister}
+            onLoginClick={handleLoginClick}
           />
           <EditProfileModal
             isOpen={activeModal === "edit-profile"}
@@ -327,3 +318,4 @@ function App() {
 }
 
 export default App;
+
